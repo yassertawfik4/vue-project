@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto my-10">
+  <div class="container mx-auto my-10 h-screen">
     <h1 class="text-4xl font-bold mb-4">Yasser Tawfik</h1>
     <h2 class="text-2xl font-semibold mb-2">Course: Vue + DaisyUI — ITI</h2>
     <p>
