@@ -47,24 +47,23 @@ const products = ref([
     badge: "POPULAR",
     price: 200,
     discount: 25,
-    stock: 0,
+    stock: 1,
     tags: ["Sport", "Outdoor"],
   },
 ]);
 
-function handleBuy(productId) {
-  const idx = products.value.findIndex((p) => p.id === Number(productId));
-  if (idx !== -1 && products.value[idx].stock > 0) {
-    products.value[idx].stock = products.value[idx].stock - 1;
+const handleBuy = (id) => {
+  const product = products.value.find(p => p.id === id)
+  if (product && product.stock > 0) {
+    product.stock--
   }
 }
+
 </script>
 
-<template class>
+<template>
   <NavBar :links="links" />
-  <RouterView v-slot="{ Component }">
-    <component :is="Component" :products="products" @buy="handleBuy" />
-  </RouterView>
+  <RouterView :products="products" @buy="handleBuy" />
   <Footer />
 </template>
 <style scoped></style>

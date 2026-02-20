@@ -17,8 +17,6 @@ onUnmounted(() => console.log(`ProductCard unmounted — id: ${product.id}`));
 </script>
 <template>
   <div class="container mx-auto my-5">
-    <h2 class="text-center text-[40px] font-bold">Related Products</h2>
-
     <div class="flex flex-wrap gap-4 justify-center py-10">
       <div class="card bg-base-100 w-96 shadow-sm">
         <figure>
